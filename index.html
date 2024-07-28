@@ -1,35 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!--
+    The meta charset defines the character encoding for the document to UTF-8.
+    UTF-8 supports all characters in the Unicode standard, which is essential for web compatibility.
+    -->
     <meta charset="UTF-8" />
+
+    <!--
+    The meta viewport tag gives the browser instructions on how to control the page's dimensions and scaling.
+    Setting the width to device-width and initial-scale to 1.0 ensures the page is rendered correctly on all devices.
+    -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--
+    Linking to the CSS file for styling.
+    -->
     <link rel="stylesheet" href="./src/styles/app.css" />
+
+    <!--
+    Link to the favicon for the page. This icon appears in the browser tab.
+    -->
     <link
       rel="shortcut icon"
       href="./src/images/drag.svg"
       type="image/x-icon"
     />
+
+    <!--
+    The title of the HTML document. This title appears in the browser tab.
+    -->
     <title>Drag and Drop Project Manager</title>
   </head>
   <body>
+    <!--
+    Template for the project input form.
+    This form contains fields for the title, description, and number of people for the project.
+    -->
     <template id="project-input">
       <form>
         <div class="form-control">
           <label for="title">Title</label>
+          <!--
+          Input field for the project title.
+          -->
           <input type="text" id="title" />
         </div>
         <div class="form-control">
           <label for="description">Description</label>
+          <!--
+          Textarea for the project description.
+          -->
           <textarea id="description" rows="3"></textarea>
         </div>
         <div class="form-control">
           <label for="people">People</label>
+          <!--
+          Input field for the number of people involved in the project.
+          The step attribute ensures the value increases in whole numbers.
+          -->
           <input type="number" id="people" step="1" min="0" max="10" />
         </div>
+        <!--
+        Button to submit the form and add the project.
+        -->
         <button type="submit">ADD PROJECT</button>
       </form>
     </template>
 
+    <!--
+    Template for a single project item.
+    The li element is draggable, indicating it can be dragged for the drag-and-drop functionality.
+    -->
     <template id="single-project">
       <li draggable="true">
         <h2></h2>
@@ -38,6 +80,10 @@
       </li>
     </template>
 
+    <!--
+    Template for the project list section.
+    The section contains a header with a title and an unordered list to hold project items.
+    -->
     <template id="project-list">
       <section class="projects">
         <header>
@@ -47,7 +93,18 @@
       </section>
     </template>
 
+    <!--
+    Div element that serves as the main container for the application.
+    JavaScript will dynamically render content into this div.
+    -->
     <div id="app"></div>
-    <script src="./dist/js/app.js"></script>
+
+    <!--
+    Script to include the JavaScript bundle.
+    The bundle.js file contains the compiled and bundled JavaScript code for the application.
+    -->
+
+    <!-- USING NAMESPACES -->
+    <script src="./dist/js/bundle.js"></script>
   </body>
 </html>
