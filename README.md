@@ -115,3 +115,7 @@ This project is licensed under the [MIT License](LICENSE).
 ---
 
 This README provides an overview of the project's structure, features, and usage instructions, along with details about the modules, namespaces, and ES module integration.
+
+### Here is an expected gif of the final project
+
+![Drag and Drop Project Management gif](./src/images/drag-and-drop.gif)
