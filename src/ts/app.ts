@@ -25,9 +25,10 @@
 
 // USING ES MODULES
 // Import the ProjectInput class from the project-input module.
-import { ProjectInput } from "./components/project-input.js";
+import { ProjectInput } from "./components/project-input";
 // Import the ProjectList class from the project-list module.
-import { ProjectList } from "./components/project-list.js";
+import { ProjectList } from "./components/project-list";
+import "../styles/app.css";
 
 // Instantiate a new ProjectInput object.
 // This creates a form for inputting new projects.
